@@ -1,0 +1,50 @@
+<h1>Basic Angular Elements</h1>
+<html>
+ <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/1.BasicAngular.js"/>
+    <script>
+        //The simplest controller by having a JS fucniton will work only if the app has no name defined. If a name is defined - like myApp - define the controller angular way.
+        // function ToggleController($scope)
+        // {
+        //     $scope.visible = true; //default visibility
+        //     $scope.toggle = function() {
+        //         $scope.visible = !$scope.visible;    
+        //     };
+        // }
+
+        //Moved to separate file js file
+        // angular.module("myApp", [])
+        //        .controller("ToggleController", function($scope) {
+        //            //Properties
+        //         $scope.visible = true; //default visibility
+
+        //         //methods
+        //         $scope.toggle = function() {
+        //                             $scope.visible = !$scope.visible;    
+        //                         };      
+        //  });
+    </script>
+ </head>
+ <!--ng-app : ANGUALR DIRECTIVE-->
+ <body ng-app="myApp">
+ <h4>Basic Angular Expression</h4>
+ <p>This is your first angular expression: {{ 1 + 2 }}</p>
+
+ <h4>Define a model element using ng-model and use that in the expression</h4>
+ Enter Name : <input type="text" ng-model="name"/><br/>
+ The name is : {{name}}<br/>
+  To implement this in jQuery, we need to set up this logic on document.onready(): Have a div to display results and popualte it on $("input").keypress(function() { $("#name").text($(this).val()); }
+
+
+<h4>Define a controller to toggle the visibility of an element on a button click event.</h4>
+<div ng-controller="ToggleController">
+    <button ng-click="toggle()">Toggle the element below</button>
+    <p ng-show="visible">Change my visibility on button click</p>
+</div>
+
+
+ </body>
+</html>
+
