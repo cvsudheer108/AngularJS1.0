@@ -31,18 +31,30 @@
  <body ng-app="myApp">
  <h4>Basic Angular Expression</h4>
  <p>This is your first angular expression: {{ 1 + 2 }}</p>
-
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
  <h4>Define a model element using ng-model and use that in the expression</h4>
  Enter Name : <input type="text" ng-model="name"/><br/>
  The name is : {{name}}<br/>
   To implement this in jQuery, we need to set up this logic on document.onready(): Have a div to display results and popualte it on $("input").keypress(function() { $("#name").text($(this).val()); }
 
-
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <h4>Define a controller to toggle the visibility of an element on a button click event.</h4>
 <div ng-controller="ToggleController">
     <button ng-click="toggle()">Toggle the element below</button>
     <p ng-show="visible">Change my visibility on button click</p>
 </div>
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<h4>ng-repeat</h4>
+<div ng-app = "" ng-init = "countries = [{locale:'en-US',name:'United States'}, {locale:'en-GB',name:'United Kingdom'}, {locale:'en-FR',name:'France'}]">
+    <ol>
+      <li ng-repeat = "country in countries">
+         {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
+      </li>
+   </ol>
+</div>
+
+
 
 
  </body>
