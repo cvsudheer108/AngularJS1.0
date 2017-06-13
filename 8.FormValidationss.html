@@ -19,6 +19,20 @@
          }
       </style>
       
+       <script>
+         var mainApp = angular.module("mainApp", []);
+         
+         mainApp.controller('studentController', function($scope) {
+            $scope.reset = function(){
+               $scope.firstName = "sudheer";
+               $scope.lastName = "kumar";
+               $scope.email = "sudheer@abc.com";
+            }
+            
+            $scope.reset();
+         });
+      </script>
+
    </head>
    <body>
       
@@ -32,6 +46,7 @@
                   <td><input name = "firstname" type = "text" ng-model = "firstName" required>
                      <span style = "color:red" ng-show = "studentForm.firstname.$dirty && studentForm.firstname.$invalid">
                         <span ng-show = "studentForm.firstname.$error.required">First Name is required.</span>
+                        <span>$error : {{studentForm.firstname.$error}}</span>
                      </span>
                   </td>
                </tr>
@@ -70,19 +85,7 @@
          </form>
       </div>
       
-      <script>
-         var mainApp = angular.module("mainApp", []);
-         
-         mainApp.controller('studentController', function($scope) {
-            $scope.reset = function(){
-               $scope.firstName = "Mahesh";
-               $scope.lastName = "Parashar";
-               $scope.email = "MaheshParashar@tutorialspoint.com";
-            }
-            
-            $scope.reset();
-         });
-      </script>
+     
       
    </body>
 </html>

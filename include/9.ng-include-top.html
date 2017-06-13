@@ -1,0 +1,14 @@
+ <table>
+ <tr><td>Enable or disable button based on checkbox value (ng-click & ng-disabled))</td></tr>
+            <tr>
+               <td><input type = "checkbox" ng-model = "enableDisableButton">Disable Button</td>
+               <td><button ng-disabled = "enableDisableButton" ng-click="count = count+1" ng-init="count=0">Click Me!</button></td>
+               <td>Clicked first button {{count}} times</td>
+            </tr>
+            
+            <tr><td>Show or Hide button based on checkbox value (ng-show & ng-hide))</td></tr>
+            <tr>
+               <td><input type = "checkbox" ng-model = "showHide1">Show or Hide Button</td>
+               <td><button ng-show = "showHide1">Click Me!</button></td>
+            </tr>
+ </table>

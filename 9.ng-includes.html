@@ -1,0 +1,24 @@
+<html>
+   
+   <head>
+      <title>AngularJS HTML DOM Directives</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <!--<script src="js/7.AngularModules-app.js"/>-->
+      <script>
+        var app = angular.module('myApp', []);
+        var ctrl = app.controller("myCtrlr", function($scope){
+                    $scope.clickCounter = 0;
+                    $scope.btnClicked = function() {
+                           $scope.clickCounter++; 
+                    }
+        });
+      </script>
+   </head>
+
+   
+   <body ng-app = "myApp" >
+      <h2>AngularJS HTML DOM Directives</h2>
+      <div ng-include="'9.testinclude.html'"></div>
+   </body>
+
+</html>
